@@ -7,7 +7,10 @@ name = "inference-lab"
 version = "0.1.0"
 description = "An AWS Bedrock inference and evaluation platform."
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pydantic>=2",
+    "pydantic-settings>=2",
+]
 
 [project.optional-dependencies]
 dev = [
