@@ -12,6 +12,8 @@ def main() -> None:
     print(f"AWS region: {settings.aws_region}")
     print(f"Request timeout: {settings.request_timeout_seconds} seconds")
     print(f"Log level: {settings.log_level}")
+    print(f"AWS profile: {settings.aws_profile}")
+    print(f"AWS region: {settings.aws_region}")
 
 
 if __name__ == "__main__":

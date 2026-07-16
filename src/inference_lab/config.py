@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     """Validated application configuration."""
 
     app_name: str = "InferenceLab"
+    aws_profile: str = "inference-lab"
+    aws_region: str = "eu-west-2"
 
     environment: Literal[
         "development",
@@ -22,7 +24,7 @@ class Settings(BaseSettings):
     request_timeout_seconds: int = Field(
         default=30,
         gt = 0,
-        lt=300,
+        le=300,
     )
     
     log_level: Literal[
