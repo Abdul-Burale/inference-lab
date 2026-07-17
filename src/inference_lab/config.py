@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     app_name: str = "InferenceLab"
     aws_profile: str = "inference-lab"
     aws_region: str = "eu-west-2"
+    bedrock_model_id: str = "amazon.nova-micro-v1:0"
 
     environment: Literal[
         "development",
@@ -18,8 +19,6 @@ class Settings(BaseSettings):
     ] = "development"
     
     debug: bool = True
-
-    aws_region: str = "eu-west-2"
 
     request_timeout_seconds: int = Field(
         default=30,
